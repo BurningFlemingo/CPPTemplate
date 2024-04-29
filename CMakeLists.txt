@@ -1,13 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 
-set (PROJ_NAME TemplateProject)
-project(${PROJ_NAME})
+set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-set (SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/src")
-set (VENDOR_DIR "${CMAKE_SOURCE_DIR}/vendor")
+set(CMAKE_SUPPRESS_REGENERATION true)
 
-set(SRC_FILES
-	${SRC_DIR}/Main.cpp
-	)
-
-add_executable(${PROJ_NAME} ${SRC_FILES})
+add_subdirectory(template_project)
