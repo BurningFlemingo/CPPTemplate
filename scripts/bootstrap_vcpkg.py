@@ -24,7 +24,4 @@ if __name__ == "__main__":
         print(f"Unsupported platform: {platform}")
         exit()
 
-    vcpkgInstallLocation = buildPathFromRoot(vcpkgDir, "vcpkg")
-    
     subprocess.run([vcpkgBootstrap])
-    subprocess.run([vcpkgInstallLocation, "install"])
